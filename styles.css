@@ -1,0 +1,346 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size:62.5% ;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background: linear-gradient(black, rgb(5, 5, 79), black );;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: rgb(26, 26, 136);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+    justify-content: space-evenly;
+}
+
+nav a i {
+    font-size: 2rem;
+    width: 30px;        /* keeps spacing consistent */
+    text-align: center; /* centers icon */
+    flex-shrink: 0;     /* prevents icon shrinking */
+    margin-right: 0.5rem; /* space between icon and text */
+    margin-left:-40px;
+}
+  
+nav a:hover,nav a.active{
+    color: rgb(26, 26, 136);
+    border-bottom: 3px solid rgb(26, 26, 136);
+}
+
+
+/* --- SIDEBAR STYLE (Small screens only) --- */
+@media(max-width:995px){
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 60px;                 /* collapsed */
+        background-color: #140444;
+        overflow-x: hidden;
+        transition: width 0.3s ease;
+        margin-top: 6rem;
+        padding-top: 5rem;
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+        display: block;              /* stack links */
+        z-index: 200;
+        overflow: hidden;
+    }
+
+    nav:hover {
+        width: 200px; /* expanded width */
+    }
+
+     /* Flex container for icon + text */
+  nav a {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+
+   /* Icon box */
+  nav a i {
+    font-size: 2rem;
+    width: 30px;        /* keeps spacing consistent */
+    text-align: center; /* centers icon */
+    flex-shrink: 0;     /* prevents icon shrinking */
+    margin-right: 0.5rem; /* space between icon and text */
+    margin-left:-40px;
+  }
+
+  /* Hide text when collapsed */
+  nav span {
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show text when expanded */
+  nav:hover span {
+    display: inline;
+    color: white;
+  }
+  nav a:hover{
+    background-color: rgb(26, 26, 136);
+    color: rgb(68, 12, 94);
+    border-radius: 0.5rem;
+  }
+}
+
+section{
+    min-height: 100dvh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: linear-gradient(black, rgb(10, 10, 92));
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: rgb(26, 26, 136);
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(26, 26, 136);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color:white;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(26, 26, 136);
+    box-shadow: 0 0 25px rgb(26, 26, 136);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(26, 26, 136);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid rgb(26, 26, 136);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: rgb(26, 26, 136);
+    color: black;
+    box-shadow: 0 0 25px rgb(26, 26, 136);
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{position: relative;}
+
+.typing-text span::before{
+    content: "software developer";
+    color: rgb(26, 26, 136);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: transparent ;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web & App Developer";
+    }
+    21%, 40%{
+        content: "Computer Science Engineer";
+    }
+     41%, 60%{
+        content: "Cybersecurity Explorer";
+    }
+     61%, 80%{
+        content: "Design, Critical, Emotional Thinker";
+    }
+     81%, 100%{
+        content: "Problem Solver";
+    }
+}
+
+@media(max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+}
+
+.footer {
+  background-color: #1f2937;   /* Tailwind bg-gray-800 */
+  color: #ffffff;              /* Tailwind text-white */
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #374151; /* subtle divider */
+  font-size: 0.9rem;           /* slightly smaller text */
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+/* Footer navigation links */
+.footer-nav {
+  margin: 0.5rem 0;
+}
+
+.footer-nav a {
+  color: #d1d5db;              /* light gray */
+  margin: 0 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;              /* turns white on hover */
+}
+
+/* Social links */
+.socials {
+  margin-top: 0.5rem;
+}
+
+.socials a {
+  color: #9ca3af;              /* muted gray */
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #ffffff;
+}
