@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script>
+      function toggleTheme() {
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-b from-indigo-900 via-blue-900 to-black text-white dark:text-white dark:bg-gradient-to-b dark:from-indigo-900 dark:via-blue-900 dark:to-black min-h-screen flex flex-col"
+  >
+    <!-- Header -->
+    <header class="flex justify-between items-center p-6 bg-black/40">
+      <a href="index.html" class="text-2xl font-bold">Delight</a>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-blue-400"
+          ><i class="fa fa-home"></i> Home</a
+        >
+        <a href="project.html" class="hover:text-blue-400"
+          ><i class="fa fa-folder"></i> Projects</a
+        >
+        <a href="contact.html" class="hover:text-blue-400"
+          ><i class="fa fa-envelope"></i> Contact</a
+        >
+      </nav>
+      <button
+        onclick="toggleTheme()"
+        class="px-3 py-1 bg-blue-600 rounded hover:bg-blue-500"
+      >
+        Toggle Mode
+      </button>
+    </header>
+
+    <!-- Projects Section -->
+    <main class="flex-grow p-10">
+      <h1 class="text-4xl font-bold text-center mb-8">My Projects</h1>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project Card -->
+        <div class="bg-white/10 dark:bg-black/30 p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-2">🦾 Gym Management System</h2>
+          <p>Gym Managemeny System at Advanced - Level</p>
+          <img src="Assets/gym.png" alt="Robot" class="mt-4 rounded-lg" />
+        </div>
+        <div class="bg-white/10 dark:bg-black/30 p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-2">🏗️ Quotation Web App</h2>
+          <p>
+            Smart construction app with 3D visualization, supplier integration
+            and live pricing.
+          </p>
+          <img src="Assets/qot.png" alt="Web App" class="mt-4 rounded-lg" />
+        </div>
+        <div class="bg-white/10 dark:bg-black/30 p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-2">🗣️ Voice Translation Tool</h2>
+          <p>
+            Live translation system using Whisper + Google Translate + Speech
+            synthesis.
+          </p>
+          <img src="Assets/vmb.png" alt="Voice Tool" class="mt-4 rounded-lg" />
+        </div>
+        <div class="bg-white/10 dark:bg-black/30 p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-2">🌍 Mycelium Harvesting</h2>
+          <p>
+            Agricultural project, growing and harvesting mycelium commercially.
+          </p>
+          <img
+            src="Assets/agri.jpg"
+            alt="Real Estate"
+            class="mt-4 rounded-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <section class="mt-16">
+        <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
+        <div
+          class="bg-white/10 dark:bg-black/30 p-6 rounded-lg shadow-lg max-w-3xl mx-auto"
+        >
+          <p>
+            <strong>B.Tech in CSE</strong> – Jagran Lakecity University, Bhopal
+          </p>
+          <ul class="list-disc ml-6 mt-2">
+            <li id="spn">
+              Relevant Courses: Probability & Statistics, Design Thinking,
+              Robotics, Psychology for Engineers,Programing: python, c, c++ &
+              Web Programing Critical thinking,
+            </li>
+            <li>
+              Languages: English, Shona, Portuguese (learning), Hindi (learning)
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center bg-black/40">
+      © 2025 My Portfolio. Built with Tailwind and Css
+    </footer>
+  </body>
+</html>
